@@ -19,7 +19,7 @@ function Login(props) {
             .then(response => {
                 console.log(response)
                 localStorage.setItem('token', response.data.payload)
-                props.history.push('/')
+                props.history.push('/homepage')
             })
             .catch(error => {
                 console.log(error.response)
@@ -51,7 +51,7 @@ function Login(props) {
                     onChange={handleChange}
                     required
                 />
-                <button onClick={handleSubmit} className='submitButton' type='submit'>Submit</button>
+                <button className='submitButton' type='submit'>Submit</button>
             </form>
         </div>
     )
