@@ -8,6 +8,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: slateblue;
 }
 
 .App {
@@ -63,6 +64,7 @@ body,
 form {
   margin-top: 60px;
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
 
   legend {
@@ -84,6 +86,19 @@ form {
   }
 }
 
+.container{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+form{
+  margin-top: 60px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
 .button-row {
   display: flex;
   justify-content: space-between;
@@ -96,4 +111,8 @@ form {
     padding: 3px 8px;
     margin-top: 16px;
   }
+}
+
+.add{
+  margin: 0 auto;
 }
