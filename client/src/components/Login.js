@@ -1,7 +1,45 @@
 import React, { useState } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth'
+import styled from 'styled-components'
 // import { withFormik, Form, Field } from 'formik'
 // import * as Yup from "yup";
+
+const Input = styled.input`
+  font-size: 18px;
+  padding: 10px;
+  background: papayawhip;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: #D9C2ED;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  }
+`;
+
+const Label = styled.label`
+font-size: 20px;
+padding: 30px;
+margin: 0 auto;
+`
+
+const Button = styled.button`
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  border-radius: 3px;
+  color: #431070;
+  border: 2px solid #431070;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+  transition: 0.5s all ease-out;
+  margin:30px;
+  &:hover {
+    background-color: #8b3ad6;
+    color: white;
+  }`
 
 
 function Login(props) {
@@ -30,8 +68,8 @@ function Login(props) {
         <div className='container'>
             <h1 className='login-header'>Login</h1>
             <form className='customForm' onSubmit={handleSubmit}>
-                <label className='label' htmlFor='username'> Username: </label>
-                <input
+                <Label className='label' htmlFor='username'> Username:</Label>
+                <Input
                     className='input'
                     type='text'
                     name='username'
@@ -41,8 +79,8 @@ function Login(props) {
                     required
                 />
 
-                <label className='label' htmlFor='password'> Password: </label>
-                <input
+                <Label className='label' htmlFor='password'> Password:</Label>
+                <Input
                     className='input'
                     type='password'
                     name='password'
@@ -51,7 +89,7 @@ function Login(props) {
                     onChange={handleChange}
                     required
                 />
-                <button className='submitButton' type='submit'>Submit</button>
+                <Button className='submitButton' type='submit'>Submit</Button>
             </form>
         </div>
     )
